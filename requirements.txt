@@ -3,3 +3,7 @@ numpy
 pandas
 pydeck
 streamlit
+requests 
+openai 
+bs4 
+googlesearch-python

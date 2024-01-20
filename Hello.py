@@ -14,7 +14,7 @@
 
 import streamlit as st
 from streamlit.logger import get_logger
-
+from utils import topic_search, summarize_links, send_email
 LOGGER = get_logger(__name__)
 
 
@@ -24,8 +24,12 @@ def run():
         page_icon="👋",
     )
 
-    st.write("# Welcome to Streamlit! 👋")
-
+    st.write("# Enter a topic to receive an email summary 👋")
+    title = st.text_input('Topic', 'Gaza')
+    links = topic_search(title)
+    summaries = summarize_links(links)
+    send_email(summaries)
+    
     st.sidebar.success("Select a demo above.")
 
     st.markdown(
