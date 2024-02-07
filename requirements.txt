@@ -7,3 +7,10 @@ requests
 openai 
 bs4 
 googlesearch-python
+httpx-oauth
+tiktoken
+google-cloud-firestore
+openai-whisper
+setuptools-rust
+yfinance
+matplotlib
